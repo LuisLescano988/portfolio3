@@ -1,3 +1,25 @@
-html{
-  scroll-behavior: smooth;
+html {
+  scroll-behavior:smooth;
+}
+
+.text-stroke-3 {
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #0f0097;
+}
+
+@keyframes fade-in-out {
+  0%, 100% {
+    opacity: 0;
+  }
+  15%, 85% {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in-out {
+  animation: fade-in-out 4s ease-in-out infinite;
+}
+
+.shadow3d {
+  box-shadow: rgba(0, 0, 0, 0.3) 9.95px 9.95px 0.5px;
 }

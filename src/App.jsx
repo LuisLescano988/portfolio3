@@ -12,16 +12,16 @@ function App() {
   return (
     <div className=' App flex flex-col'>
       <div className='snap-y snap-mandatory h-screen overflow-x-hidden '>
-        <div id='home' className=' snap-center' onMouseOver={() => setCurrentSection('home')}>
+        <div id='home' className=' snap-center' onMouseEnter={() => setCurrentSection('home')}>
           <Intro />
         </div>
-        <div id='work' className=' snap-center' onMouseOver={() => setCurrentSection('work')}>
+        <div id='work' className=' snap-center' onMouseEnter={() => setCurrentSection('work')}>
           <Work />
         </div>
-        <div id='about' className=' snap-center' onMouseOver={() => setCurrentSection('about')}>
+        <div id='about' className=' snap-center' onMouseEnter={() => setCurrentSection('about')}>
           <About />
         </div>
-        <div id='contact' className=' snap-center' onMouseOver={() => setCurrentSection('contact')}>
+        <div id='contact' className=' snap-center' onMouseEnter={() => setCurrentSection('contact')}>
           <Contact />
         </div>
       </div>

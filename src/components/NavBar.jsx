@@ -2,53 +2,33 @@ import React, {  useEffect, useState } from 'react'
 
 
 const NavBar = ({currentSection, setCurrentSection}) => {
-    // const [targetElement, setTargetElement] = useState('');
-    
-    // const handleClick = (e) => {
-    //     e.preventDefault();
-    //     const targetId = e.target.getAttribute('href').slice(1);
-    //     const element = document.getElementById(targetId);
-    //     if (targetElement) {
-    //         element.scrollIntoView({ behavior: 'smooth' });
-    //         setTargetElement(element.id);
-    //         currentSection = targetElement
-    //         console.log(currentSection)
-    //     }
-    // };
-    
-    // useEffect(() => {
-    //     console.log(targetElement)
-    // }, []);
 
     const handleClick = (e, section) => {
-        // e.preventDefault();
-        console.log('1')
+        console.log(section);
         setCurrentSection(section);
+        const targetedSection = document.getElementById(section)
+        targetedSection.scrollIntoView({behavior:'smooth'})
       };
     
     return (
-        <div className=' fixed right-0 bottom-0 mb-20 mr-16'>
-            <nav className=' w-20 flex-col flex'>
-                <a className={` w-20 ${currentSection === 'home' ? 'font-bold' : ''} transition-all hover:font-bold`}
-                    href='#home'
+        <div className=' fixed right-0 bottom-0 mb-20 mr-12 z-40'>
+            <nav className=' w-24 flex-col flex text-lg  text-blue-900'>
+                <a className={` w-24 ${currentSection === 'home' ? 'font-marcher' : ''} hover:cursor-pointer transition-all hover:font-marcher`}
                     onClick={(e) => handleClick(e, 'home')}
                 >
                     Home
                 </a>
-                <a className={` w-20 ${currentSection === 'work' ? 'font-bold' : ''} transition-all hover:font-bold`}
-                    href='#work'
+                <a className={` w-20 ${currentSection === 'work' ? 'font-marcher' : ''} hover:cursor-pointer transition-all hover:font-marcher`}
                     onClick={(e) => handleClick(e, 'work')}
                 >
                     Work
                 </a>
-                <a className={` w-20 ${currentSection === 'about' ? 'font-bold' : ''} transition-all hover:font-bold`}
-                    href='#about'
+                <a className={` w-24 ${currentSection === 'about' ? 'font-marcher' : ''} hover:cursor-pointer transition-all hover:font-marcher`}
                     onClick={(e) => handleClick(e, 'about')}
                 >
                     About me
                 </a>
-                <a className={` w-20 ${currentSection === 'contact' ? 'font-bold' : ''} transition-all hover:font-bold`}
-                    href='#contact'
+                <a className={` w-20 ${currentSection === 'contact' ? 'font-marcher' : ''} hover:cursor-pointer transition-all hover:font-marcher`}
                     onClick={(e) => handleClick(e, 'contact')}
                 >
                     Contact

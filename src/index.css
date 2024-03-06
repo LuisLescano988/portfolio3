@@ -16,3 +16,13 @@
 ::-webkit-scrollbar {
   display: none;
 }
+
+@font-face {
+  font-family: Recipes;
+  src: url(/src/assets/Fonts/DJB\ Messy\ Amanda\ Goes\ Bold.ttf);
+}
+
+@font-face {
+  font-family: Marcher;
+  src: url(/src/assets/Fonts/Marcher\ Black.otf);
+}
