@@ -8,24 +8,30 @@ import NavBar from './components/NavBar';
 
 function App() {
   const [currentSection, setCurrentSection] = useState('home');
+  const [currentLighted, setCurrentLighted] = useState(false);
 
   return (
     <div className=' App flex flex-col'>
       <div className='snap-y snap-mandatory h-screen overflow-x-hidden '>
-        <div id='home' className=' snap-center' onMouseEnter={() => setCurrentSection('home')}>
-          <Intro />
+        <div id='home' className=' snap-start ' onMouseEnter={() => setCurrentSection('home')}>
+          <Intro
+            currentLighted={currentLighted} setCurrentLighted={setCurrentLighted}
+          />
         </div>
-        <div id='work' className=' snap-center' onMouseEnter={() => setCurrentSection('work')}>
+        <div id='work' className=' snap-start ' onMouseEnter={() => setCurrentSection('work')}>
           <Work />
         </div>
-        <div id='about' className=' snap-center' onMouseEnter={() => setCurrentSection('about')}>
+        <div id='about' className=' snap-start' onMouseEnter={() => setCurrentSection('about')}>
           <About />
         </div>
-        <div id='contact' className=' snap-center' onMouseEnter={() => setCurrentSection('contact')}>
+        <div id='contact' className=' snap-start' onMouseEnter={() => setCurrentSection('contact')}>
           <Contact />
         </div>
       </div>
-      <NavBar currentSection={currentSection} setCurrentSection={setCurrentSection} />
+      <NavBar
+        currentSection={currentSection} setCurrentSection={setCurrentSection}
+        currentLighted={currentLighted} setCurrentLighted={setCurrentLighted}
+      />
     </div>
   )
 }

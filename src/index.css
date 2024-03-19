@@ -26,3 +26,13 @@
   font-family: Marcher;
   src: url(/src/assets/Fonts/Marcher\ Black.otf);
 }
+
+@font-face {
+  font-family: Sweet;
+  src: url(/src/assets/fonts/SweetSansProThin.woff);
+}
+
+@font-face {
+  font-family: American;
+  src: url(/src/assets/fonts/AmericanTypewriter.ttc);
+}

@@ -1,5 +1,5 @@
 html {
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
 .text-stroke-3 {
@@ -7,11 +7,20 @@ html {
   -webkit-text-stroke-color: #0f0097;
 }
 
+.text-stroke-4 {
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #c9c9c9;
+}
+
 @keyframes fade-in-out {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 0;
   }
-  15%, 85% {
+
+  15%,
+  85% {
     opacity: 1;
   }
 }
@@ -22,4 +31,33 @@ html {
 
 .shadow3d {
   box-shadow: rgba(0, 0, 0, 0.3) 9.95px 9.95px 0.5px;
+}
+
+.weight-transition {
+  transition: font-weight 0.14s ease-in-out;
+}
+
+.smoothie{
+  scroll-behavior: smooth;
+}
+
+@keyframes inAnimation {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes outAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

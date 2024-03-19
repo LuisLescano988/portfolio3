@@ -6,11 +6,13 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      // sans: ["Inter", "system-ui", "Avenir", "Helvetica", "Arial", "sans-serif"],
       recipes: ["Recipes", "sweet-sans"],
-      marcher: ["Marcher", "sweet-sans"]
+      marcher: ["Marcher", "sweet-sans"],
+      sweet: ["Sweet", "sweet-sans"],
+      american: ["American", "sweet-sans"],
     },
-    extend: {},
+    extend: {
+    },
   },
   plugins: [],
 }
