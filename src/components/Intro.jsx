@@ -42,7 +42,7 @@ const Intro = ({currentLighted, setCurrentLighted}) => {
                 <div className={` xl:flex hidden  justify-center relative items-center h-screen w-1/3 transition-colors ${!currentLighted?'bg-slate-50':'bg-zinc-500'}`}>
                     <div className=' relative w-screen -left-28 bottom-[10%]'>
                         <div className=' flex flex-row relative'>
-                            <button className=' z-30 absolute xl:mt-[8%] xl:ml-[25%] 2xl:mt-[10%] 2xl:ml-[28%] lg:text-4xl hover:cursor-pointer font-black'
+                            <button className=' z-30 absolute xl:mt-[8%] xl:ml-[25%] 2xl:mt-[10%] 2xl:ml-[28%] lg:text-4xl   font-black'
                                 onClick={()=>toggleLigthed()} >.</button>
                             <div className=' '>
                                 <img className=' z-0 absolute top-0 left-0 w-4/12 xl:w-[50.6%] 2xl:w-[56.2%] ' src={lamp} alt="" />

@@ -68,6 +68,7 @@ const Work = () => {
     setTimeout(() => {
       visi=='opacity-0'?setVisi('opacity-100'):setVisi('opacity-0')
     }, 50);
+    console.log(selectedProject, 'PROJECT')
   };
 
   const handlePrev = (project) => {
@@ -76,6 +77,7 @@ const Work = () => {
       const previousIndex = (currentIndex - 1 + frontProjects.length) % frontProjects.length;
       setSelectedProject(frontProjects[previousIndex]);
     }
+    console.log(selectedProject, 'PROJECT PREV')
   }
 
   const handleNext = (project) => {
@@ -93,7 +95,7 @@ const Work = () => {
         <div
         className={` absolute z-50 w-screen h-screen transition-all duration-700 delay-75 ${selectedProject? visi : visi}`}>
           <div className='flex flex-row relative justify-center transition-all h-full bg-opacity-90 bg-black'>
-            <div className=' rotate-90 object-cover text-2xl text-white hover:cursor-pointer z-50'
+            <div className=' rotate-90 object-cover text-2xl text-white   z-50'
               onClick={() => handlePrev(selectedProject)}
             >🅥</div>
               <Transition className=' flex flex-col relative justify-center items-center w-10/12 h-full'
@@ -111,7 +113,7 @@ const Work = () => {
                   </span>
                   <span className=' flex flex-row'>
                     ⏺ ⏺
-                    <span className=' hover:cursor-pointer ml-1'
+                    <span className='   ml-1'
                       onClick={() => handleClick('')}
                     >
                       🅧
@@ -136,7 +138,7 @@ const Work = () => {
                   </div>
                 </div>
               </Transition>
-            <div className=' z-50 -rotate-90 text-2xl text-white hover:cursor-pointer'
+            <div className=' z-50 -rotate-90 text-2xl text-white  '
               onClick={() => handleNext(selectedProject)}
             >🅥</div>
           </div>
@@ -148,7 +150,7 @@ const Work = () => {
           className='  absolute flex flex-row items-center w-full top-[11%] left-[9%] '
           onMouseLeave={() => setHoverDesign(false)}
         >
-          <div className=' flex flex-col relative justify-center items-start h-2/3 w-[30%] hover:cursor-pointer bg-purple-200 z-10'
+          <div className=' flex flex-col relative justify-center items-start h-2/3 w-[30%]   bg-purple-200 z-10'
             onMouseOver={() => setHoverDesign(true)}
           >
             <p className=' font-marcher text-blue-800 text-4xl'>Designing</p>
@@ -166,7 +168,7 @@ const Work = () => {
               return (
                 <div
                   className={` bg-orange-100 px-3 py-1 rounded-3xl h-52 overflow-hidden transition-all duration-700 group
-                    ${!hoverDesign ? ' -translate-x-[520px] h-48 opacity-0' : ' opacity-40 translate-x-0 hover:opacity-100 hover:cursor-pointer'}
+                    ${!hoverDesign ? ' -translate-x-[520px] h-48 opacity-0' : ' opacity-40 translate-x-0 hover:opacity-100  '}
                     ${selectedProject === project.projectName ? ' hidden' : ''}
                     `}
                   key={idx}
@@ -189,7 +191,7 @@ const Work = () => {
               return (
                 <div
                   className={` bg-orange-100 px-3 py-1 rounded-3xl h-52 flex justify-center transition-all duration-700 group
-                ${!hoverEngineering ? ' translate-x-[520px] h-48 opacity-0' : ' opacity-40 translate-x-0 hover:opacity-100 hover:cursor-pointer'} 
+                ${!hoverEngineering ? ' translate-x-[520px] h-48 opacity-0' : ' opacity-40 translate-x-0 hover:opacity-100  '} 
                 `}
                   key={idx}
                 >
@@ -199,7 +201,7 @@ const Work = () => {
                 </div>)
             })}
           </div>
-          <div className=' flex flex-col relative justify-center items-start h-2/3 w-[30%] hover:cursor-pointer'
+          <div className=' flex flex-col relative justify-center items-start h-2/3 w-[30%]  '
             onMouseOver={() => setHoverEngineering(true)}
           >
             <p className=' font-marcher text-blue-800 text-4xl'>Engineering</p>
