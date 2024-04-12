@@ -42,9 +42,9 @@ const Work = ({currentLighted, setCurrentLighted}) => {
   const backProjects = [
     {
       projectName: 'Games Trend',
-      description: 'React, Redux, Node, PostgreSQL and Sequelize SPA, fetching data from Rawg API with controlled form to post game info to database, filters by API/database or genre; sorts by name/score, also details of each game and searchbar',
+      description: 'Fullstack SPA, fetching data from Rawg API with controlled form to post game info to database, filters by API/database or genre; sorts by name/score, also details of each game and searchbar',
       image: games,
-      techTools: [],
+      techTools: ['React', 'Redux', 'Node', 'PostgreSQL', 'Sequelize'],
       link: 'https://fullstack-video-games.vercel.app/'
     },
     // {
@@ -70,9 +70,10 @@ const Work = ({currentLighted, setCurrentLighted}) => {
       visi == 'opacity-0' ? setVisi('opacity-100') : setVisi('opacity-0')
     }, 50);
   };
-
+  
   const handlePrev = (project) => {
     if (project) {
+      console.log(backProjects.find(project => project.projectName==selectedProject.projectName), '.FIND')
       const currentIndex = frontProjects.findIndex(project => project.projectName === selectedProject.projectName);
       const previousIndex = (currentIndex - 1 + frontProjects.length) % frontProjects.length;
       setSelectedProject(frontProjects[previousIndex]);
@@ -87,6 +88,22 @@ const Work = ({currentLighted, setCurrentLighted}) => {
     }
   }
 
+  const handlePrevBack = (project) => {
+    if (project) {
+      const currentIndex = backProjects.findIndex(project => project.projectName === selectedProject.projectName);
+      const previousIndex = (currentIndex - 1 + backProjects.length) % backProjects.length;
+      setSelectedProject(backProjects[previousIndex]);
+    }
+  }
+
+  const handleNextBack = (project) => {
+    if (project) {
+      const currentIndex = backProjects.findIndex(project => project.projectName === selectedProject.projectName);
+      const previousIndex = (currentIndex + 1 + backProjects.length) % backProjects.length;
+      setSelectedProject(backProjects[previousIndex]);
+    }
+  }
+
 
   return (
     <section id='work' className=' snap-center relative '>
@@ -95,7 +112,8 @@ const Work = ({currentLighted, setCurrentLighted}) => {
           className={` absolute z-50 w-screen h-screen transition-all duration-700 delay-75 ${selectedProject ? visi : visi}`}>
           <div className='flex flex-row relative justify-center transition-all h-full bg-opacity-90 bg-black'>
             <div className=' rotate-90 object-cover text-2xl text-white   z-50'
-              onClick={() => handlePrev(selectedProject)}
+              // onClick={()=>handlePrev(selectedProject)}
+              onClick={backProjects.find(project=>project.projectName==selectedProject.projectName)?() => handlePrevBack(selectedProject):()=>handlePrev(selectedProject)}
             >🅥</div>
             <Transition className=' flex flex-col relative justify-center items-center w-10/12 h-full'
               show={selectedProject ? true : false}
@@ -138,7 +156,7 @@ const Work = ({currentLighted, setCurrentLighted}) => {
               </div>
             </Transition>
             <div className=' z-50 -rotate-90 text-2xl text-white  '
-              onClick={() => handleNext(selectedProject)}
+              onClick={backProjects.find(project=>project.projectName==selectedProject.projectName)?() => handleNextBack(selectedProject):()=>handleNext(selectedProject)}
             >🅥</div>
           </div>
         </div> :
