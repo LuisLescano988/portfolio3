@@ -14,19 +14,19 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
           <div className={` relative transition-all duration-500 hover:border-zinc-500 border-transparent group border-4   rounded-3xl max-h-full ${currentLighted ? 'bg-rose-300' : 'bg-yellow-200'} flex justify-center`}>
             <div className="absolute top-[12%] left-[0%] w-[72.1%] rounded-full h-[2.5%] bg-zinc-500 transition-all duration-500 opacity-0 group-hover:opacity-100 transform rotate-45 origin-top-left"></div>
             <div className="absolute top-[12%] right-[0%] w-[72.1%] rounded-full h-[2.5%] bg-zinc-500 transition-all duration-500 opacity-0 group-hover:opacity-100 transform -rotate-45 origin-top-right"></div>
-            <div className=' absolute top-[26%] font-american text-xl'>
-                Mail me!
+            <div className=' absolute top-[26%]  text-xl'>
+              Mail me!
             </div>
-              <a className=' absolute cursor-default h-[99%] w-[99%]' href="mailto:alfredoluislescano@gmail.com" rel="noreferrer" target="_blank">
-              </a>
+            <a className=' absolute cursor-default h-[99%] w-[99%]' href="mailto:alfredoluislescano@gmail.com" rel="noreferrer" target="_blank">
+            </a>
             <IoMdOpen className=' absolute top-[85%] left-[85%]' />
           </div>
-          <div className={` border-transparent z-10 hover:border-zinc-500 duration-700 border-4 transition-opacity relative rounded-3xl h-full ${!currentLighted ? 'bg-yellow-100' : 'bg-rose-200'} flex flex-row justify-center items-center font-american group`}>
+          <div className={` border-transparent z-10 hover:border-zinc-500 duration-700 border-4 transition-opacity relative rounded-3xl h-full ${!currentLighted ? 'bg-yellow-100' : 'bg-rose-200'} flex flex-row justify-center items-center  group`}>
             <div className=' absolute w-auto flex flex-col justify-center text-center group-hover:-translate-x-16 duration-700'>
               <img className=' z-30 md:w-20 w-28 h-auto group-hover:w-20 ease-in transition-all mb-1' src={iconResume} alt="" />
               RESUME
               <div className=' absolute z-0 group-hover:z-40 opacity-0 duration-700 group-hover:hover:opacity-100 group-hover:opacity-20 tracking-widest transition-all group-hover:translate-x-24 group-hover:-translate-y-8 font-marcher'>
-                <a className='flex flex-row h-full w-full cursor-default' target='_blank' href={'/resume'}>
+                <a className='flex flex-row h-full w-full cursor-default' target='_blank' href={'https://portfolio3-ruddy.vercel.app/resume'}>
                   English
                   <IoMdOpen className=' ' />
                 </a>
@@ -34,7 +34,7 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
               <div className=' absolute z-0 group-hover:z-40 opacity-0 duration-700 group-hover:hover:opacity-100 group-hover:opacity-20 tracking-widest transition-all group-hover:translate-x-24 group-hover:translate-y-2 font-marcher'>
                 <a className=' h-full w-full cursor-default flex flex-row' target='_blank' href={'/curriculum'}>
                   Español
-            <IoMdOpen className=' ' />
+                  <IoMdOpen className=' ' />
                 </a>
               </div>
             </div>
