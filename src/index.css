@@ -19,12 +19,12 @@
 
 @font-face {
   font-family: Recipes;
-  src: url(/src/assets/Fonts/DJB\ Messy\ Amanda\ Goes\ Bold.woff);
+  src: url(/src/assets/Fonts/DJB.woff);
 }
 
 @font-face {
   font-family: Marcher;
-  src: url(/src/assets/Fonts/Marcher\ Black.woff);
+  src: url(/src/assets/Fonts/Marcher.woff);
 }
 
 @font-face {
@@ -33,6 +33,6 @@
 }
 
 @font-face {
-  font-family: American;
+  font-family: 'American';
   src: url(/src/assets/fonts/AmericanTypewriter.woff);
 }
