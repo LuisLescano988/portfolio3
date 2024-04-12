@@ -3,10 +3,10 @@ import LiImage from '../assets/imgs/Li Pf.jpg'
 import gitHubPf from '../assets/imgs/GithubPf.jpg'
 import { KittenEyes } from './KittenEyes'
 import { IoMdOpen } from 'react-icons/io'
-import { Link } from 'react-router-dom'
+import iconResume from '../assets/imgs/resume icon.jpg'
 
 
-const Contact = () => {
+const Contact = ({currentLighted, setCurrentLighted}) => {
   return (
     <section id='contact' >
       <div className=' h-screen flex relative items-center'>
@@ -19,10 +19,21 @@ const Contact = () => {
             </div>
             <IoMdOpen className=' absolute top-[85%] left-[85%]' />
           </div>
-          <div className=' relative rounded-3xl h-full bg-yellow-100 flex justify-center items-center '>
-            <a className=' flex justify-center items-center absolute h-full w-full ' target='_blank' href={'/resume'} >
+          <div className=' border-transparent z-10 hover:border-zinc-500 duration-700 border-4 transition-opacity relative rounded-3xl h-full bg-yellow-100 flex flex-row justify-center items-center font-american group'>
+            <div className=' absolute w-auto flex flex-col justify-center text-center group-hover:-translate-x-16 duration-700'>
+              <img className=' z-30 w-28 h-auto opacity-50 group-hover:w-20 group-hover:opacity-100 ease-in transition-all mb-1' src={iconResume} alt="" />
               RESUME
-            </a>
+              <div className=' absolute z-0 group-hover:z-40 opacity-0 duration-700 group-hover:hover:opacity-100 group-hover:opacity-20 tracking-widest transition-all group-hover:translate-x-24 group-hover:-translate-y-8 font-marcher'>
+                <a className=' h-full w-full' target='_blank' href={'/resume'}>
+                  English
+                </a>
+              </div>
+              <div className=' absolute z-0 group-hover:z-40 opacity-0 duration-700 group-hover:hover:opacity-100 group-hover:opacity-20 tracking-widest transition-all group-hover:translate-x-24 group-hover:translate-y-2 font-marcher'>
+                <a className=' h-full w-full' target='_blank' href={'/curriculum'}>
+                  Español
+                </a>
+              </div>
+            </div>
           </div>
           <div className=' relative group opacity-70 duration-500 transition-all border-opacity-0 hover:border-opacity-100 border-4 border-zinc-700 rounded-3xl h-full  bg-blue-300 col-span-2 flex justify-center items-center'>
             <a className=' absolute z-10 w-full h-full cursor-default' target='_blank' href="https://www.linkedin.com/in/luis-lescano/" ></a>

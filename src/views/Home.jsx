@@ -19,13 +19,19 @@ function Home() {
           />
         </div>
         <div id='work' className=' snap-start ' onMouseEnter={() => setCurrentSection('work')}>
-          <Work />
+          <Work
+            currentLighted={currentLighted} setCurrentLighted={setCurrentLighted}
+          />
         </div>
         <div id='about' className=' snap-start' onMouseEnter={() => setCurrentSection('about')}>
-          <About />
+          <About
+            currentLighted={currentLighted} setCurrentLighted={setCurrentLighted}
+          />
         </div>
         <div id='contact' className=' snap-start' onMouseEnter={() => setCurrentSection('contact')}>
-          <Contact />
+          <Contact
+            currentLighted={currentLighted} setCurrentLighted={setCurrentLighted}
+          />
         </div>
       </div>
       <NavBar

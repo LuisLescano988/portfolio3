@@ -22,7 +22,7 @@ const NavBar = ({ currentSection, setCurrentSection, currentLighted, setCurrentL
                 <div className={`h-[85%] w-[36%] rounded-full absolute left-1 transition-all duration-500 ${!currentLighted ? ' translate-x-0' : ' translate-x-9'} ${!currentLighted ? ' bg-yellow-200' : ' bg-gray-400'}`}></div>
             </div>
 
-            <nav className=' absolute bottom-[7%] w-24 flex-col flex text-lg  text-blue-900'>
+            <nav className={` absolute bottom-[7%] w-24 flex-col flex text-lg  ${!currentLighted?'text-blue-900':'text-lime-400'}`}>
                 <a className={` w-24 ${currentSection === 'home' ? 'font-black' : ''} cursor-default weight-transition hover:font-black `}
                     onClick={(e) => handleClick(e, 'home')}
                 >

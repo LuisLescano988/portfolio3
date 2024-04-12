@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './views/Home';
-import Resume from './views/Resume';
+import CVLuis from './views/CVLuis';
+import ProvResume from './views/ProvResume';
 // import Intro from './components/Intro'
 // import Work from './components/Work'
 // import About from './components/About'
@@ -14,10 +15,11 @@ function App() {
   // const [currentLighted, setCurrentLighted] = useState(false);
 
   return (
-    <div>
+    <div className=' cursor-default'>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="/resume" element={<Resume/>} />
+        <Route path="/resume" element={<ProvResume/>} />
+        <Route path="/curriculum" element={<CVLuis/>} />
       </Routes>
     </div>
     // <div className=' App flex flex-col'>

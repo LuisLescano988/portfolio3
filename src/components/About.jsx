@@ -1,12 +1,12 @@
 import React from 'react'
 import nobak from '../assets/imgs/headshot.jpeg'
 
-const About = () => {
+const About = ({currentLighted, setCurrentLighted}) => {
   return (
     <section id='about'>
-      <div className=' h-screen bg-yellow-100 flex flex-row justify-evenly items-center'>
+      <div className={` h-screen ${!currentLighted?'bg-yellow-100':'bg-pink-600'} transition-all flex flex-row justify-evenly items-center`}>
         <div className=' w-1/3'>
-          <p className=' leading-9 tracking-wider text-blue-900'>
+          <p className={` leading-9 tracking-wider ${currentLighted?'text-slate-300':'text-blue-800'}`}>
             Hi, my name is Luigi and I am a highly ambitious,
             self-motivated, and driven Full stack developer
             based in Santiago del Estero, Argentina. <br /> I graduated
