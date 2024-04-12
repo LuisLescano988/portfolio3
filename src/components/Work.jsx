@@ -73,7 +73,6 @@ const Work = ({currentLighted, setCurrentLighted}) => {
   
   const handlePrev = (project) => {
     if (project) {
-      console.log(backProjects.find(project => project.projectName==selectedProject.projectName), '.FIND')
       const currentIndex = frontProjects.findIndex(project => project.projectName === selectedProject.projectName);
       const previousIndex = (currentIndex - 1 + frontProjects.length) % frontProjects.length;
       setSelectedProject(frontProjects[previousIndex]);

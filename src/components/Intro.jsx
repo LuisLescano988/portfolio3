@@ -10,7 +10,6 @@ const Intro = ({currentLighted, setCurrentLighted}) => {
 
     const toggleLigthed = () => {
         setCurrentLighted(!currentLighted)
-        console.log(currentLighted)
     };
 
     useEffect(() => {

@@ -5,11 +5,9 @@ const NavBar = ({ currentSection, setCurrentSection, currentLighted, setCurrentL
 
     const handleLight = () => {
         setCurrentLighted(!currentLighted);
-        console.log(currentLighted)
     };
 
     const handleClick = (e, section) => {
-        console.log(section);
         setCurrentSection(section);
         const targetedSection = document.getElementById(section)
         targetedSection.scrollIntoView({ behavior: 'smooth' })
