@@ -27,7 +27,7 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
               <img className=' z-30 md:w-20 w-28 h-auto group-hover:w-20 ease-in transition-all mb-1' src={iconResume} alt="" />
               RESUME
               <div className=' absolute z-0 group-hover:z-40 opacity-0 duration-700 group-hover:hover:opacity-100 group-hover:opacity-20 tracking-widest transition-all group-hover:translate-x-24 group-hover:-translate-y-8 font-marcher'>
-                <NavLink className='flex flex-row h-full w-full cursor-default' to={'/resume'}>
+                <NavLink className='flex flex-row h-full w-full cursor-default' target='_blank' to={'https://portfolio3-eight-jet.vercel.app/resume'}>
                   English
                   <IoMdOpen className=' ' />
                 </NavLink>
