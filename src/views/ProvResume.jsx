@@ -3,13 +3,8 @@ import { jsPDF } from 'jspdf';
 import ResumeImage from '../assets/pdfs/Resume.jpg';
 
 const downloadPDF = () => {
-  // Crea un nuevo objeto jsPDF
   const doc = new jsPDF();
-
-  // Agrega la imagen al documento PDF
-  doc.addImage(ResumeImage, 'JPEG', 10, 10, 190, 277); // Ajusta los valores según sea necesario
-
-  // Guarda el documento como un archivo PDF
+  doc.addImage(ResumeImage, 'JPEG', 10, 10, 190, 277);
   doc.save('Resume.pdf');
 };
 

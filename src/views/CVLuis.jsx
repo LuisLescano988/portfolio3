@@ -5,12 +5,9 @@ import ResumeImage2 from '../assets/pdfs/CV2.jpg';
 
 const downloadPDF = () => {
     const doc = new jsPDF();
-
     doc.addImage(ResumeImage, 'JPEG', -7, 10, 220, 277);
-
-    doc.addPage(); // Agrega una nueva página al PDF
+    doc.addPage();
     doc.addImage(ResumeImage2, 'JPEG', -7, 10, 220, 170);
-
     doc.save('Resume.pdf');
 };
 
