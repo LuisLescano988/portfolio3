@@ -4,6 +4,7 @@ import gitHubPf from '../assets/imgs/GithubPf.jpg'
 import { KittenEyes } from './KittenEyes'
 import { IoMdOpen } from 'react-icons/io'
 import iconResume from '../assets/imgs/resume icon.jpg'
+import { NavLink } from 'react-router-dom'
 
 
 const Contact = ({ currentLighted, setCurrentLighted }) => {
@@ -26,16 +27,16 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
               <img className=' z-30 md:w-20 w-28 h-auto group-hover:w-20 ease-in transition-all mb-1' src={iconResume} alt="" />
               RESUME
               <div className=' absolute z-0 group-hover:z-40 opacity-0 duration-700 group-hover:hover:opacity-100 group-hover:opacity-20 tracking-widest transition-all group-hover:translate-x-24 group-hover:-translate-y-8 font-marcher'>
-                <a className='flex flex-row h-full w-full cursor-default' target='_blank' href={'https://portfolio3-ruddy.vercel.app/resume'}>
+                <NavLink className='flex flex-row h-full w-full cursor-default' target='_blank' to={'/resume'}>
                   English
                   <IoMdOpen className=' ' />
-                </a>
+                </NavLink>
               </div>
               <div className=' absolute z-0 group-hover:z-40 opacity-0 duration-700 group-hover:hover:opacity-100 group-hover:opacity-20 tracking-widest transition-all group-hover:translate-x-24 group-hover:translate-y-2 font-marcher'>
-                <a className=' h-full w-full cursor-default flex flex-row' target='_blank' href={'/curriculum'}>
+                <NavLink className=' h-full w-full cursor-default flex flex-row' target='_blank' to={'/curriculum'}>
                   Español
                   <IoMdOpen className=' ' />
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>

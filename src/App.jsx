@@ -10,7 +10,7 @@ function App() {
     <div className=' cursor-default'>
       <Routes>
         <Route path="/" element={<Home/>} />
-        <Route path="https://portfolio3-ruddy.vercel.app/resume" element={<ProvResume/>} />
+        <Route path="/resume" element={<ProvResume/>} />
         <Route path="/curriculum" element={<CVLuis/>} />
       </Routes>
     </div>
