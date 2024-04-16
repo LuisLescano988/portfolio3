@@ -14,20 +14,20 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
 
   return (
     <section id='contact' >
-      <div className={` h-screen flex relative items-center transition-all ${currentLighted ? 'bg-zinc-600 text-orange-800' : 'bg-slate-50 text-blue-800'}`}>
+      <div className={` h-screen flex relative items-center transition-all ${currentLighted ? 'bg-zinc-600 text-stone-200' : 'bg-slate-50 text-blue-800'}`}>
         <div className=' z-20 absolute  overflow-visible left-28 w-[70%] h-[90%] grid grid-cols-4 gap-5 bg-transparent'>
-          <div className={` relative transition-all duration-500 hover:border-zinc-500 border-transparent group border-4   rounded-3xl max-h-full ${currentLighted ? 'bg-rose-300' : 'bg-yellow-200'} flex justify-center`}>
+          <div className={` relative transition-all duration-500 hover:border-zinc-500 border-transparent group border-4   rounded-3xl max-h-full ${currentLighted ? 'bg-fuchsia-300 text-white' : 'bg-yellow-200'} flex justify-center`}>
             <div className="absolute top-[12%] left-[0%] w-[72.1%] rounded-full h-[2.5%] bg-zinc-500 transition-all duration-500 opacity-0 group-hover:opacity-100 transform rotate-45 origin-top-left"></div>
             <div className="absolute top-[12%] right-[0%] w-[72.1%] rounded-full h-[2.5%] bg-zinc-500 transition-all duration-500 opacity-0 group-hover:opacity-100 transform -rotate-45 origin-top-right"></div>
-            <div className=' absolute top-[26%] font-american text-xl'>
+            <div className=' absolute top-[26%] font-american text-xl '>
               Mail me!
             </div>
             <a className=' absolute cursor-default h-[99%] w-[99%]' href="mailto:alfredoluislescano@gmail.com" rel="noreferrer" target="_blank">
             </a>
             <IoMdOpen className=' absolute top-[85%] left-[85%]' />
           </div>
-          <div className={` border-transparent z-10 hover:border-zinc-500 duration-700 border-4 transition-opacity relative rounded-3xl h-full ${!currentLighted ? 'bg-yellow-100' : 'bg-rose-200'} flex flex-row justify-center items-center  group`}>
-            <div className=' absolute w-auto flex flex-col justify-center text-center group-hover:-translate-x-16 duration-700 '>
+          <div className={` border-transparent z-10 hover:border-zinc-500 duration-700 border-4 transition-opacity relative rounded-3xl h-full ${!currentLighted ? 'bg-yellow-100' : 'bg-indigo-400 text-white'} flex flex-row justify-center items-center  group`}>
+            <div className=' absolute w-auto flex flex-col justify-center text-center group-hover:-translate-x-16 duration-700  '>
               <img className=' z-30 md:w-20 w-28 h-auto group-hover:w-20 ease-in transition-all mb-1' src={iconResume} alt="" />
               RESUME
               <div className=' absolute z-0 group-hover:z-40 opacity-0 duration-700 group-hover:hover:opacity-100 group-hover:opacity-20 tracking-widest transition-all group-hover:translate-x-24 group-hover:-translate-y-8 font-marcher'>
@@ -77,10 +77,10 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
               </div>
             </div>
           </div>
-          <div className={` relative rounded-3xl transition-all duration-500 ${currentLighted ? 'bg-rose-300' : 'bg-yellow-200'}`}>
+          <div className={` relative rounded-3xl transition-all duration-500 ${currentLighted ? 'bg-fuchsia-300' : 'bg-yellow-200'}`}>
             <KittenEyes />
           </div>
-          <a className={` relative rounded-3xl ${currentLighted ? 'bg-rose-200' : 'bg-yellow-100'} cursor-default group border-transparent border-4 hover:border-zinc-500 transition-all duration-500 flex justify-center items-center text-5xl `}
+          <a className={` relative rounded-3xl ${currentLighted ? 'bg-indigo-400' : 'bg-yellow-100'} cursor-default group border-transparent border-4 hover:border-zinc-500 transition-all duration-500 flex justify-center items-center text-5xl `}
             href={'https://twitter.com/LuisLes988'} target='_blank'>
             <FaXTwitter className=' text-blue-100 group-hover:text-blue-800 transition-all duration-500 ' onMouseEnter={() => handleNonProfit} />
           </a>
