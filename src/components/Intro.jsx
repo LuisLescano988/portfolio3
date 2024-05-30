@@ -28,9 +28,9 @@ const Intro = ({currentLighted, setCurrentLighted}) => {
         <section id='home' className={` snap-center h-screen `}>
             <div className=' flex flex-row'>
                 <div className={` flex pl-2 justify-center items-center h-screen w-2/3 bg-yellow-100' ${!currentLighted?'bg-yellow-100':' bg-pink-600'}`}>
-                    <div className=' w-8/12'>
-                        <div className={` mb-2 font-recipes h-fit w-full text-4xl ${currentLighted?'text-lime-400':'text-blue-900'} font-extrabold `}>😀 Hi, I'm Luis </div>
-                        <p className={`font-marcher text-5xl text-transparent ${!currentLighted==true?'text-stroke-3':'text-stroke-4'} `}>
+                    <div className=' md:w-8/12 w-10/12 md:h-fit h-1/2'>
+                        <div className={` mb-2 font-recipes h-fit md:w-full text-4xl ${currentLighted?'text-lime-400':'text-blue-900'} font-extrabold `}>😀 Hi, I'm Luis </div>
+                        <p className={` relative font-marcher md:text-5xl text-3xl text-transparent ${!currentLighted==true?'text-stroke-3':'text-stroke-4'} `}>
                             I'm a Web Developer who likes to craft interactive things with code and also
                             <span className={`animate-fade-in-out text-stroke-3 ${adjetive.includes('cat') || adjetive.includes('field') ? 'text-lime-400' : ' text-purple-500'}`}>
                                 {adjetive}
@@ -38,9 +38,9 @@ const Intro = ({currentLighted, setCurrentLighted}) => {
                         </p>
                     </div>
                 </div>
-                <div className={` xl:flex hidden  justify-center relative items-center h-screen w-1/3 transition-colors ${!currentLighted?'bg-slate-50':'bg-zinc-600'}`}>
+                <div className={` flex justify-center relative items-center h-screen w-1/3 transition-colors ${!currentLighted?'bg-slate-50':'bg-zinc-600'}`}>
                     <div className=' relative w-screen -left-28 bottom-[10%]'>
-                        <div className=' flex flex-row relative'>
+                        <div className=' xl:flex hidden flex-row relative'>
                             <button className=' z-30 absolute xl:mt-[8%] xl:ml-[25%] 2xl:mt-[10%] 2xl:ml-[28%] lg:text-4xl   font-black'
                                 onClick={()=>toggleLigthed()} >.</button>
                             <div className=' '>

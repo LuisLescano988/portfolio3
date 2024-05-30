@@ -13,7 +13,7 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
   const [profitDiv, setProfitDiv] = useState('false')
 
   return (
-    <section id='contact' >
+    <section id='contact' className='snap-center h-screen' >
       <div className={` h-screen flex relative items-center transition-all ${currentLighted ? 'bg-zinc-600 text-stone-200' : 'bg-slate-50 text-blue-800'}`}>
         <div className=' z-20 absolute  overflow-visible left-28 w-[70%] h-[90%] grid grid-cols-4 gap-5 bg-transparent'>
           <div className={` relative transition-all duration-500 hover:border-zinc-500 border-transparent group border-4   rounded-3xl max-h-full ${currentLighted ? 'bg-fuchsia-300 text-white' : 'bg-yellow-200'} flex justify-center`}>

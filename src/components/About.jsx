@@ -4,9 +4,9 @@ import nobak from '../assets/imgs/headshot.jpeg'
 const About = ({currentLighted, setCurrentLighted}) => {
   return (
     <section id='about'>
-      <div className={` h-screen ${!currentLighted?'bg-yellow-100':'bg-pink-600'} transition-all flex flex-row justify-evenly items-center`}>
-        <div className=' w-1/3'>
-          <p className={` leading-9 tracking-wider ${currentLighted?'text-slate-300':'text-blue-800'}`}>
+      <div className={` h-screen ${!currentLighted?'bg-yellow-100':'bg-pink-600'} transition-all flex flex-row justify-evenly relative items-center`}>
+        <div className=' md:w-1/3 w-2/3 md:relative flex absolute z-10 left-5'>
+          <p className={` md:leading-9 tracking-wider ${currentLighted?'text-slate-300':'text-blue-800'}`}>
             Hi, my name is Luigi and I am a highly ambitious,
             self-motivated, and driven Full stack developer
             based in Santiago del Estero, Argentina. <br /> I graduated
@@ -23,8 +23,8 @@ const About = ({currentLighted, setCurrentLighted}) => {
             or projects that have a significant impact on companies. 🤓
           </p>
         </div>
-        <div className=' w-1/4'>
-          <img className=' border-4 border-black shadow3d w-ful right-0' src={nobak} alt="" />
+        <div className=' md:w-1/4 md:inline md:relative absolute right-2 w-[40%] z-0 '>
+          <img className=' md:relative md:bottom-0 bottom-40 absolute md:rounded-none rounded-full border-4 border-black shadow3d md:w-full w-[65%] right-0' src={nobak} alt="" />
         </div>
       </div>
     </section>

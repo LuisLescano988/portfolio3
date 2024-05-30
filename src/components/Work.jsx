@@ -7,7 +7,7 @@ import { IoMdOpen } from 'react-icons/io'
 import { useEffect } from 'react'
 import { Transition } from '@tailwindui/react'
 
-const Work = ({currentLighted, setCurrentLighted}) => {
+const Work = ({ currentLighted, setCurrentLighted }) => {
 
   const frontProjects = [
     {
@@ -70,7 +70,7 @@ const Work = ({currentLighted, setCurrentLighted}) => {
       visi == 'opacity-0' ? setVisi('opacity-100') : setVisi('opacity-0')
     }, 50);
   };
-  
+
   const handlePrev = (project) => {
     if (project) {
       const currentIndex = frontProjects.findIndex(project => project.projectName === selectedProject.projectName);
@@ -108,11 +108,10 @@ const Work = ({currentLighted, setCurrentLighted}) => {
     <section id='work' className=' snap-center relative '>
       {selectedProject ?
         <div
-          className={` absolute z-50 w-screen h-screen transition-all duration-700 delay-75 ${selectedProject ? visi : visi}`}>
+          className={` md:absolute md:inline hidden z-50 w-screen h-screen transition-all duration-700 delay-75 ${selectedProject ? visi : visi}`}>
           <div className='flex flex-row relative justify-center transition-all h-full bg-opacity-90 bg-black'>
-            <div className=' rotate-90 object-cover text-2xl text-white   z-50'
-              // onClick={()=>handlePrev(selectedProject)}
-              onClick={backProjects.find(project=>project.projectName==selectedProject.projectName)?() => handlePrevBack(selectedProject):()=>handlePrev(selectedProject)}
+            <div className=' rotate-90 object-cover md:text-2xl text-white   z-50'
+              onClick={backProjects.find(project => project.projectName == selectedProject.projectName) ? () => handlePrevBack(selectedProject) : () => handlePrev(selectedProject)}
             >🅥</div>
             <Transition className=' flex flex-col relative justify-center items-center w-10/12 h-full'
               show={selectedProject ? true : false}
@@ -129,7 +128,7 @@ const Work = ({currentLighted, setCurrentLighted}) => {
                 </span>
                 <span className=' flex flex-row'>
                   ⏺ ⏺
-                  <span className='   ml-1'
+                  <span className=' ml-1'
                     onClick={() => handleClick('')}
                   >
                     🅧
@@ -155,22 +154,24 @@ const Work = ({currentLighted, setCurrentLighted}) => {
               </div>
             </Transition>
             <div className=' z-50 -rotate-90 text-2xl text-white  '
-              onClick={backProjects.find(project=>project.projectName==selectedProject.projectName)?() => handleNextBack(selectedProject):()=>handleNext(selectedProject)}
+              onClick={backProjects.find(project => project.projectName == selectedProject.projectName) ? () => handleNextBack(selectedProject) : () => handleNext(selectedProject)}
             >🅥</div>
           </div>
         </div> :
         null
       }
-      <div className={` h-screen relative  flex justify-center transition-all duration-500 ${!currentLighted?'bg-purple-200':' bg-violet-950'}`}>
+      <div className={` h-screen relative  flex justify-center transition-all duration-500 ${!currentLighted ? 'bg-purple-200' : ' bg-violet-950'}`}>
         <div
-          className='  absolute flex flex-row items-center w-full top-[11%] left-[9%] '
+          className=' absolute flex md:flex-row flex-col items-center w-full md:top-[11%] top-[8%] md:left-[9%] left-[4%] '
           onMouseLeave={() => setHoverDesign(false)}
         >
-          <div className=' flex flex-col relative justify-center items-start h-2/3 w-[30%]   z-10'
+          <div className=' flex flex-col relative justify-center items-start h-2/3 md:w-[30%] z-10'
             onMouseOver={() => setHoverDesign(true)}
           >
-            <p className={` font-marcher text-4xl transition-all duration-1000 ${!currentLighted? 'text-blue-800':'text-lime-300'}`}>Designing</p>
-            <p className={` leading-loose mt-2 tracking-widest transition-all duration-700 ${!currentLighted? 'text-blue-800':'text-neutral-400'}`}>
+            <p className={` font-marcher md:text-4xl text-2xl transition-all duration-1000 ${!currentLighted ? 'text-blue-800' : 'text-lime-300'}`}>
+              Designing
+            </p>
+            <p className={` leading-loose text-sm md:text-base w-11/12 md:w-full md:mt-2 md:tracking-widest transition-all duration-700 ${!currentLighted ? 'text-blue-800' : 'text-neutral-400'}`}>
               I am an atypical programmer, committed to creating fluid user experiences and
               designing with contemporary and attractive styles. Always looking to share knowledge
               that brings new perspectives, always listening to clients to approach the work focused
@@ -178,49 +179,65 @@ const Work = ({currentLighted, setCurrentLighted}) => {
             </p>
           </div>
           <div
-            className={` grid grid-cols-3 gap-3 mx-4 h-[30%] w-[45%] z-0`}
+            className={` grid grid-cols-3 gap-3 md:mx-4 h-[30%] md:w-[45%] z-0`}
           >
             {frontProjects.map((project, idx) => {
               return (
                 <div
-                  className={` bg-orange-100 px-3 py-1 rounded-3xl h-52 overflow-hidden transition-all duration-700 group
-                    ${!hoverDesign ? ' -translate-x-[520px] h-48 opacity-0' : ' opacity-10 translate-x-0 hover:opacity-100'}
+                  className={` md:inline md:px-3 md:py-1 rounded-3xl h-52 overflow-hidden transition-all duration-700 group
+                    ${!hoverDesign ? ' md:-translate-x-[520px] md:h-48 md:opacity-0' : ' opacity-10 translate-x-0 hover:opacity-100'}
                     ${selectedProject === project.projectName ? ' hidden' : ''}`}
                   key={idx}
                 >
+                  <a className='md:hidden' target='_blank' href={selectedProject?.link}>
+                    <img
+                      onClick={() => handleClick(project)}
+                      src={project.image}
+                      className={` md:absolute md:bottom-0 inline -bottom-[58%] left-0 mt-2 opacity-90 transition-all duration-500 md:object-top object-cover md:h-full h-[57%] w-full rounded-2xl group-hover:opacity-100`}
+                    />
+                  </a>
                   <img
                     onClick={() => handleClick(project)}
                     src={project.image}
-                    className={` absolute bottom-0 left-0 opacity-30 transition-all duration-500 object-top object-cover h-full w-full rounded-2xl group-hover:opacity-100`}
+                    className={` md:absolute md:bottom-0 hidden md:inline -bottom-[58%] left-0 opacity-90 transition-all duration-500 md:object-top object-cover md:h-full h-[57%] w-full rounded-2xl group-hover:opacity-100`}
                   />
                 </div>)
             })}
           </div>
         </div>
-        <div className=' absolute flex flex-row w-full top-[55%] left-[6%]'
+        <div className=' absolute flex md:flex-row flex-col w-full md:top-[55%] top-[23%] md:left-[6%] left-[4%]'
           onMouseLeave={() => setHoverEngineering(false)}
         >
-          <div className='  grid grid-cols-3 mx-4 h-[30%] w-[45%] '
+          <div className=' grid grid-cols-3 md:mx-4 h-[30%] md:w-[45%] '
           >
             {backProjects.map((project, idx) => {
               return (
                 <div
-                  className={` bg-orange-100 col-start-2 px-3 py-1 rounded-3xl h-52 w-full flex justify-center transition-all duration-700 group
-                ${!hoverEngineering ? ' translate-x-[93%] h-48 opacity-0' : ' opacity-10 -translate-x-[19%] hover:opacity-100  '}
+                  className={` col-start-2 md:px-3 py-1 rounded-3xl h-52 w-full md:flex justify-center transition-all duration-700 group
+                ${!hoverEngineering ? ' md:translate-x-[93%] md:h-48 md:opacity-0' : ' opacity-10 -translate-x-[19%] hover:opacity-100  '}
                 ${selectedProject === project.projectName ? ' hidden' : ''}`}
                   key={idx}
                 >
+                  <a className=' md:hidden' target='_blank' href={selectedProject?.link}>
+                    <img src={project.image}
+                      onClick={() => handleClick(project)}
+                      className={`absolute md:bottom-0 -bottom-[33%] left-0 opacity-90 transition-all duration-500 object-top object-cover md:h-full h-[33%] md:w-full w-32 rounded-2xl group-hover:opacity-100`}
+                    />
+                  </a>
                   <img src={project.image}
                     onClick={() => handleClick(project)}
-                    className={`absolute bottom-0 left-0 opacity-30 transition-all duration-500 object-top object-cover h-full w-full rounded-2xl group-hover:opacity-100`}/>
+                    className={`absolute md:bottom-0 hidden md:inline -bottom-[33%] left-0 opacity-90 transition-all duration-500 object-top object-cover md:h-full h-[57%] md:w-full w-2/5 rounded-2xl group-hover:opacity-100`}
+                  />
                 </div>)
             })}
           </div>
-          <div className=' flex flex-col relative justify-center items-start h-2/3 w-[30%]  '
+          <div className=' flex flex-col relative justify-center items-start h-2/3 md:w-[30%]  '
             onMouseOver={() => setHoverEngineering(true)}
           >
-            <p className={` ${!currentLighted? 'text-blue-800':'text-lime-300'} font-marcher text-4xl`}>Engineering</p>
-            <p className={` ${!currentLighted? 'text-blue-800':'text-neutral-400'} leading-loose mt-2 tracking-widest`}>
+            <p className={` ${!currentLighted ? 'text-blue-800' : 'text-lime-300'} font-marcher md:text-4xl text-2xl`}>
+              Engineering
+            </p>
+            <p className={` ${!currentLighted ? 'text-blue-800' : 'text-neutral-400'} md:text-base text-sm leading-loose md:mt-2 md:tracking-widest w-[93%]`}>
               When building applications with Javascript or Python I focus on delivering optimized
               solutions that prioritize scalability, performance and speed. It is also important for
               me to keep my code in line with innovations in the IT world.

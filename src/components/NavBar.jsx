@@ -14,7 +14,7 @@ const NavBar = ({ currentSection, setCurrentSection, currentLighted, setCurrentL
     };
 
     return (
-        <div className=' fixed h-screen right-[9%] bottom-0 z-40'>
+        <div className=' fixed md:h-screen h-full md:right-[9%] right-28 md:bottom-0 z-40'>
             <div className={`rounded-full   overflow-hidden absolute transition-colors left-0 top-[4%] h-7 w-[4.2rem] ${!currentLighted ? ' bg-blue-200' : ' bg-blue-900'} flex justify-center items-center transition-transform duration-500`}
                 onClick={()=>handleLight()}>
                 <div className={`h-[85%] w-[36%] rounded-full absolute left-1 transition-all duration-500 ${!currentLighted ? ' translate-x-0' : ' translate-x-9'} ${!currentLighted ? ' bg-yellow-200' : ' bg-gray-400'}`}></div>
