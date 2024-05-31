@@ -13,7 +13,7 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
   const [profitDiv, setProfitDiv] = useState('false')
 
   return (
-    <section id='contact' className='snap-center h-screen' >
+    <section id='contact' className='snap-center h-screen overflow-hidden' >
       <div className={` h-screen flex relative items-center transition-all ${currentLighted ? 'bg-zinc-600 text-stone-200' : 'bg-slate-50 text-blue-800'}`}>
         <div className=' z-20 absolute  overflow-visible md:left-28 left-3 md:w-[70%] w-[94%] md:h-[90%] top-[9%] md:top-[4%] h-[62%] grid grid-cols-4 gap-5 bg-transparent'>
           <div className={` relative transition-all duration-500 hover:border-zinc-500 border-transparent group border-4   rounded-3xl max-h-full ${currentLighted ? 'bg-fuchsia-300 text-white' : 'bg-yellow-200'} flex justify-center`}>
@@ -98,7 +98,7 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
               </div>
             </div>
           </div>
-          <div className={` relative md:hidden group md:opacity-70 opacity-100 duration-500 transition-all border-opacity-0 hover:border-opacity-100 border-4 border-zinc-700 rounded-3xl w-full h-[75%] ${currentLighted ? 'bg-teal-400' : 'bg-blue-300'} col-span-2 flex justify-center items-center`}>
+          <div className={` relative md:hidden group md:opacity-70 opacity-70 duration-500 transition-all border-opacity-0 hover:border-opacity-100 border-4 border-zinc-700 rounded-3xl w-full h-[75%] ${currentLighted ? 'bg-teal-400' : 'bg-blue-300'} col-span-2 flex justify-center items-center`}>
             <a className=' absolute z-10 w-full h-full cursor-default' target='_blank' href="https://www.linkedin.com/in/luis-lescano/" ></a>
             <img className=' absolute h-full w-[85%] object-cover ' src={LiImage} alt="" />
             <div className=' absolute md:opacity-0 group-hover:opacity-100 duration-300 text-3xl rounded-LG font-marcher bg text-sky-900 bg-opacity-60 bg-zinc-100'>

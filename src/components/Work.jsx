@@ -105,7 +105,7 @@ const Work = ({ currentLighted, setCurrentLighted }) => {
 
 
   return (
-    <section id='work' className=' snap-center relative '>
+    <section id='work' className=' snap-center relative overflow-hidden '>
       {selectedProject ?
         <div
           className={` md:absolute md:inline hidden z-50 w-screen h-screen transition-all duration-700 delay-75 ${selectedProject ? visi : visi}`}>
@@ -162,7 +162,7 @@ const Work = ({ currentLighted, setCurrentLighted }) => {
       }
       <div className={` h-screen relative  flex justify-center transition-all duration-500 ${!currentLighted ? 'bg-purple-200' : ' bg-violet-950'}`}>
         <div
-          className=' absolute flex md:flex-row flex-col items-center w-full md:top-[11%] top-[8%] md:left-[9%] left-[4%] '
+          className=' absolute flex md:flex-row flex-col md:items-center w-full md:top-[11%] top-[8%] md:left-[9%] left-[4%] '
           onMouseLeave={() => setHoverDesign(false)}
         >
           <div className=' flex flex-col relative justify-center items-start h-2/3 md:w-[30%] z-10'
@@ -179,13 +179,13 @@ const Work = ({ currentLighted, setCurrentLighted }) => {
             </p>
           </div>
           <div
-            className={` grid grid-cols-3 gap-3 md:mx-4 h-[30%] md:w-[45%] z-0`}
+            className={` grid grid-cols-3 md:gap-3 gap-1 md:mx-4 h-[30%] md:w-[45%] z-0`}
           >
             {frontProjects.map((project, idx) => {
               return (
                 <div
                   className={` md:inline md:px-3 md:py-1 rounded-3xl h-52 overflow-hidden transition-all duration-700 group
-                    ${!hoverDesign ? ' md:-translate-x-[520px] md:h-48 md:opacity-0' : ' opacity-10 translate-x-0 hover:opacity-100'}
+                    ${!hoverDesign ? ' md:-translate-x-[520px] md:h-48 md:opacity-0' : ' md:opacity-10 md:translate-x-0 hover:opacity-100'}
                     ${selectedProject === project.projectName ? ' hidden' : ''}`}
                   key={idx}
                 >
@@ -193,7 +193,7 @@ const Work = ({ currentLighted, setCurrentLighted }) => {
                     <img
                       onClick={() => handleClick(project)}
                       src={project.image}
-                      className={` md:absolute md:bottom-0 inline -bottom-[58%] left-0 mt-2 opacity-90 transition-all duration-500 md:object-top object-cover md:h-full h-[57%] w-full rounded-2xl group-hover:opacity-100`}
+                      className={` md:absolute md:bottom-0 inline -bottom-[58%] left-0 mt-2 opacity-90 transition-all duration-500 md:object-top object-cover md:h-full h-[57%] md:w-full w-[90%] rounded-2xl group-hover:opacity-100`}
                     />
                   </a>
                   <img
@@ -214,14 +214,14 @@ const Work = ({ currentLighted, setCurrentLighted }) => {
               return (
                 <div
                   className={` col-start-2 md:px-3 py-1 rounded-3xl h-52 w-full md:flex justify-center transition-all duration-700 group
-                ${!hoverEngineering ? ' md:translate-x-[93%] md:h-48 md:opacity-0' : ' opacity-10 -translate-x-[19%] hover:opacity-100  '}
+                ${!hoverEngineering ? ' md:translate-x-[93%] md:h-48 md:opacity-0 ' : ' md:opacity-10 md:-translate-x-[19%] hover:opacity-100  '}
                 ${selectedProject === project.projectName ? ' hidden' : ''}`}
                   key={idx}
                 >
-                  <a className=' md:hidden' target='_blank' href={selectedProject?.link}>
+                  <a className=' md:hidden ' target='_blank' href={selectedProject?.link}>
                     <img src={project.image}
                       onClick={() => handleClick(project)}
-                      className={`absolute md:bottom-0 -bottom-[33%] left-0 opacity-90 transition-all duration-500 object-top object-cover md:h-full h-[33%] md:w-full w-32 rounded-2xl group-hover:opacity-100`}
+                      className={`absolute md:bottom-0 -bottom-[35%] left-0 opacity-90 transition-all duration-500 object-top object-cover md:h-full h-[33%] md:w-full w-[29%] rounded-2xl group-hover:opacity-100`}
                     />
                   </a>
                   <img src={project.image}
