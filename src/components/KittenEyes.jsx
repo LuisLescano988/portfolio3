@@ -24,7 +24,7 @@ export const KittenEyes = () => {
   }, []);
 
   return (
-    <div className=' absolute cursor-default bg-stone-500 h-[80px] w-[74px] bottom-1/2 left-1/3 rounded-full'>
+    <div className=' absolute cursor-default bg-stone-500 h-[80px] w-[74px] md:bottom-1/2 bottom-12 left-1 md:left-1/3 rounded-full'>
       <div className=' w-full absolute text-center flex flex-row justify-center top-1/4'>
         <div className='relative mx-1'>
           <div className='absolute w-0 h-0 rotate-12 border-t-[14px] border-t-transparent border-l-[30px] border-stone-500 border-b-[30px] border-b-transparent bottom-3 left-[1px]'></div>
@@ -55,7 +55,7 @@ export const KittenEyes = () => {
           <div className=' '>____</div>
         </div>
       </div>
-      <div className=' absolute bg-stone-500 rounded-t-full top-14 -left-[5px] w-[84px] h-[100px]'>
+      <div className=' md:absolute hidden md:inline bg-stone-500 rounded-t-full top-14 -left-[5px] w-[84px] h-[100px]'>
         <div className=' absolute bottom-0 left-[19px] h-12 w-4 border-l-2 border-r-2 border-black'></div>
         <div className=' absolute bottom-0 left-[19px] h-2 w-4 border border-black rounded-t-full'></div>
         <div className=' absolute bottom-0 left-[49px] h-12 w-4 border-l-2 border-r-2 border-black'></div>

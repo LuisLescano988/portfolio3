@@ -25,7 +25,7 @@ const Intro = ({currentLighted, setCurrentLighted}) => {
 
 
     return (
-        <section id='home' className={` snap-center h-screen `}>
+        <section id='home' className={` snap-center h-screen overflow-hidden `}>
             <div className=' flex flex-row'>
                 <div className={` flex pl-2 justify-center items-center h-screen w-2/3 bg-yellow-100' ${!currentLighted?'bg-yellow-100':' bg-pink-600'}`}>
                     <div className=' md:w-8/12 w-10/12 md:h-fit h-1/2'>
