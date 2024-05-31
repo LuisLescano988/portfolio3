@@ -160,9 +160,9 @@ const Work = ({ currentLighted, setCurrentLighted }) => {
         </div> :
         null
       }
-      <div className={` h-screen relative  flex justify-center transition-all duration-500 ${!currentLighted ? 'bg-purple-200' : ' bg-violet-950'}`}>
+      <div className={` h-screen relative flex justify-center transition-all duration-500 ${!currentLighted ? 'bg-purple-200' : ' bg-violet-950'}`}>
         <div
-          className=' absolute flex md:flex-row flex-col md:items-center w-full md:top-[11%] top-[8%] md:left-[9%] left-[4%] '
+          className=' absolute flex md:flex-row flex-col mt-0 md:items-center w-full md:top-[11%] top-[14%] md:left-[9%] left-[4%] '
           onMouseLeave={() => setHoverDesign(false)}
         >
           <div className=' flex flex-col relative justify-center items-start h-2/3 md:w-[30%] z-10'
@@ -205,7 +205,7 @@ const Work = ({ currentLighted, setCurrentLighted }) => {
             })}
           </div>
         </div>
-        <div className=' absolute flex md:flex-row flex-col w-full md:top-[55%] top-[23%] md:left-[6%] left-[4%]'
+        <div className=' absolute flex md:flex-row flex-col w-full md:top-[55%] top-[27%] md:left-[6%] left-[4%]'
           onMouseLeave={() => setHoverEngineering(false)}
         >
           <div className=' grid grid-cols-3 md:mx-4 h-[30%] md:w-[45%] '
