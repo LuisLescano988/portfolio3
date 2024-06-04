@@ -162,7 +162,7 @@ const Work = ({ currentLighted, setCurrentLighted }) => {
       }
       <div className={` h-screen relative flex justify-center transition-all duration-500 ${!currentLighted ? 'bg-purple-200' : ' bg-violet-950'}`}>
         <div
-          className=' absolute flex md:flex-row flex-col mt-0 md:items-center w-full md:top-[11%] top-[14%] md:left-[9%] left-[4%] '
+          className=' absolute flex md:flex-row flex-col mt-0 md:items-center w-full md:top-[11%] top-[6%] md:left-[9%] left-[4%] '
           onMouseLeave={() => setHoverDesign(false)}
         >
           <div className=' flex flex-col relative justify-center items-start h-2/3 md:w-[30%] z-10'
@@ -171,7 +171,7 @@ const Work = ({ currentLighted, setCurrentLighted }) => {
             <p className={` font-marcher md:text-4xl text-2xl transition-all duration-1000 ${!currentLighted ? 'text-blue-800' : 'text-lime-300'}`}>
               Designing
             </p>
-            <p className={` leading-loose text-sm md:text-base w-11/12 md:w-full md:mt-2 md:tracking-widest transition-all duration-700 ${!currentLighted ? 'text-blue-800' : 'text-neutral-400'}`}>
+            <p className={`lg:leading-loose leading-relaxed text-sm md:text-base w-11/12 md:w-full md:mt-2 md:tracking-widest transition-all duration-700 ${!currentLighted ? 'text-blue-800' : 'text-neutral-400'}`}>
               I am an atypical programmer, committed to creating fluid user experiences and
               designing with contemporary and attractive styles. Always looking to share knowledge
               that brings new perspectives, always listening to clients to approach the work focused
@@ -193,7 +193,7 @@ const Work = ({ currentLighted, setCurrentLighted }) => {
                     <img
                       onClick={() => handleClick(project)}
                       src={project.image}
-                      className={` md:absolute md:bottom-0 inline -bottom-[58%] left-0 mt-2 opacity-90 transition-all duration-500 md:object-top object-cover md:h-full h-[57%] md:w-full w-[90%] rounded-2xl group-hover:opacity-100`}
+                      className={` md:absolute md:bottom-0 inline -bottom-[58%] left-0 mt-2 opacity-90 transition-all duration-500 md:object-top object-cover md:h-full h-[32%] md:w-full w-[90%] rounded-2xl group-hover:opacity-100`}
                     />
                   </a>
                   <img
@@ -205,23 +205,19 @@ const Work = ({ currentLighted, setCurrentLighted }) => {
             })}
           </div>
         </div>
-        <div className=' absolute flex md:flex-row flex-col w-full md:top-[55%] top-[27%] md:left-[6%] left-[4%]'
-          onMouseLeave={() => setHoverEngineering(false)}
-        >
-          <div className=' grid grid-cols-3 md:mx-4 h-[30%] md:w-[45%] '
-          >
+        <div className=' absolute flex md:flex-row flex-col w-full md:top-[55%] top-[18%] md:left-[6%] left-[4%]'
+          onMouseLeave={() => setHoverEngineering(false)}>
+          <div className=' grid grid-cols-3 md:mx-4 h-[30%] md:w-[45%] '>
             {backProjects.map((project, idx) => {
               return (
-                <div
-                  className={` col-start-2 md:px-3 py-1 rounded-3xl h-52 w-full md:flex justify-center transition-all duration-700 group
+                <div className={` col-start-2 md:px-3 py-1 rounded-3xl h-52 w-full md:flex justify-center transition-all duration-700 group
                 ${!hoverEngineering ? ' md:translate-x-[93%] md:h-48 md:opacity-0 ' : ' md:opacity-10 md:-translate-x-[19%] hover:opacity-100  '}
                 ${selectedProject === project.projectName ? ' hidden' : ''}`}
-                  key={idx}
-                >
+                  key={idx}>
                   <a className=' md:hidden ' target='_blank' href={selectedProject?.link}>
                     <img src={project.image}
                       onClick={() => handleClick(project)}
-                      className={`absolute md:bottom-0 -bottom-[35%] left-0 opacity-90 transition-all duration-500 object-top object-cover md:h-full h-[33%] md:w-full w-[29%] rounded-2xl group-hover:opacity-100`}
+                      className={`absolute md:bottom-0 -bottom-[25%] left-0 opacity-90 transition-all duration-500 object-top object-cover md:h-full h-[19%] md:w-full w-[29%] rounded-2xl group-hover:opacity-100`}
                     />
                   </a>
                   <img src={project.image}
@@ -232,12 +228,11 @@ const Work = ({ currentLighted, setCurrentLighted }) => {
             })}
           </div>
           <div className=' flex flex-col relative justify-center items-start h-2/3 md:w-[30%]  '
-            onMouseOver={() => setHoverEngineering(true)}
-          >
+            onMouseOver={() => setHoverEngineering(true)}>
             <p className={` ${!currentLighted ? 'text-blue-800' : 'text-lime-300'} font-marcher md:text-4xl text-2xl`}>
               Engineering
             </p>
-            <p className={` ${!currentLighted ? 'text-blue-800' : 'text-neutral-400'} md:text-base text-sm leading-loose md:mt-2 md:tracking-widest w-[93%]`}>
+            <p className={` ${!currentLighted ? 'text-blue-800' : 'text-neutral-400'} lg:leading-loose leading-relaxed md:text-base text-sm md:mt-2 md:tracking-widest w-[93%]`}>
               When building applications with Javascript or Python I focus on delivering optimized
               solutions that prioritize scalability, performance and speed. It is also important for
               me to keep my code in line with innovations in the IT world.

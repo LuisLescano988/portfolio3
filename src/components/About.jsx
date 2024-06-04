@@ -4,9 +4,9 @@ import nobak from '../assets/imgs/headshot.jpeg'
 const About = ({currentLighted, setCurrentLighted}) => {
   return (
     <section id='about'>
-      <div className={` h-screen overflow-hidden ${!currentLighted?'bg-yellow-100':'bg-pink-600'} transition-all flex flex-row justify-evenly relative items-center`}>
-        <div className=' md:w-1/3 w-2/3 md:relative flex absolute z-10 left-5'>
-          <p className={` md:leading-9 tracking-wider ${currentLighted?'text-slate-300':'text-blue-800'}`}>
+      <div className={` min-[400px]:min-h-96 h-screen overflow-hidden ${!currentLighted?'bg-yellow-100':'bg-pink-600'} transition-all flex flex-row justify-evenly relative items-center`}>
+        <div className=' md:w-2/5 w-2/3 md:relative flex absolute z-10 md:left-5 left-3'>
+          <p className={` lg:leading-9 leading-none tracking-wider ${currentLighted?'text-slate-300':'text-blue-800'}`}>
             Hi, my name is Luigi and I am a highly ambitious,
             self-motivated, and driven Full stack developer
             based in Santiago del Estero, Argentina. <br /> I graduated

@@ -28,7 +28,7 @@ const Intro = ({currentLighted, setCurrentLighted}) => {
         <section id='home' className={` snap-center h-screen overflow-hidden `}>
             <div className=' flex flex-row'>
                 <div className={` flex pl-2 justify-center items-center h-screen w-2/3 bg-yellow-100' ${!currentLighted?'bg-yellow-100':' bg-pink-600'}`}>
-                    <div className=' md:w-8/12 w-10/12 md:h-fit h-1/2'>
+                    <div className=' md:w-8/12 w-10/12 md:h-fit h-1/2 -mt-40 lg:mt-0'>
                         <div className={` mb-2 font-recipes h-fit md:w-full text-4xl ${currentLighted?'text-lime-400':'text-blue-900'} font-extrabold `}>😀 Hi, I'm Luis </div>
                         <p className={` relative font-marcher md:text-5xl text-3xl text-transparent ${!currentLighted==true?'text-stroke-3':'text-stroke-4'} `}>
                             I'm a Web Developer who likes to craft interactive things with code and also

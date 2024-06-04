@@ -13,13 +13,13 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
   const [profitDiv, setProfitDiv] = useState('false')
 
   return (
-    <section id='contact' className='snap-center h-screen overflow-hidden' >
-      <div className={` h-screen flex relative items-center transition-all ${currentLighted ? 'bg-zinc-600 text-stone-200' : 'bg-slate-50 text-blue-800'}`}>
+    <section id='contact' className='snap-center min-[400px]:min-h-96 h-screen overflow-hidden' >
+      <div className={` min-[400px]:min-h-96 h-screen flex relative items-center transition-all ${currentLighted ? 'bg-zinc-600 text-stone-200' : 'bg-slate-50 text-blue-800'}`}>
         <div className=' z-20 absolute  overflow-visible md:left-28 left-3 md:w-[70%] w-[94%] md:h-[90%] top-[9%] md:top-[4%] h-[62%] grid grid-cols-4 gap-5 bg-transparent'>
           <div className={` relative transition-all duration-500 hover:border-zinc-500 border-transparent group border-4   rounded-3xl max-h-full ${currentLighted ? 'bg-fuchsia-300 text-white' : 'bg-yellow-200'} flex justify-center`}>
             <div className="absolute top-[12%] left-[0%] w-[72.1%] rounded-full h-[2.5%] bg-zinc-500 transition-all duration-500 opacity-0 group-hover:opacity-100 transform rotate-45 origin-top-left"></div>
             <div className="absolute top-[12%] right-[0%] w-[72.1%] rounded-full h-[2.5%] bg-zinc-500 transition-all duration-500 opacity-0 group-hover:opacity-100 transform -rotate-45 origin-top-right"></div>
-            <div className=' absolute md:top-[26%] top-[39%] font-extrabold italic md:text-xl '>
+            <div className=' absolute md:top-[26%] top-[34%] max-lg:left-[20%] font-extrabold italic md:text-xl '>
               Mail me!
             </div>
             <a className=' absolute cursor-default h-[99%] w-[99%]' href="mailto:alfredoluislescano@gmail.com" rel="noreferrer" target="_blank">
@@ -28,7 +28,7 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
           </div>
           <div className={` border-transparent z-10 hover:border-zinc-500 duration-700 border-4 transition-opacity relative rounded-3xl h-full ${!currentLighted ? 'bg-yellow-100' : 'bg-indigo-400 text-white'} flex flex-row justify-center items-center  group`}>
             <div className=' absolute w-auto md:left-[30%] italic flex flex-col justify-center text-center md:group-hover:-translate-x-14 duration-700 '>
-              <img className=' z-30 md:w-20 w-auto md:h-auto h-20 md:group-hover:opacity-100 group-hover:opacity-0 ease-in transition-all mb-1' src={iconResume} alt="" />
+              <img className=' z-30 md:w-20 w-auto md:h-auto h-14 md:group-hover:opacity-100 group-hover:opacity-0 ease-in transition-all mb-1' src={iconResume} alt="" />
               RESUME
               <div className=' absolute z-0 group-hover:z-40 opacity-0 duration-300 group-hover:hover:opacity-100 md:group-hover:opacity-20 group-hover:opacity-100 md:tracking-widest transition-all md:group-hover:translate-x-24 md:group-hover:-translate-y-8 font-marcher'>
                 <NavLink className='flex flex-row -ml-1 h-full w-full italic cursor-default' target='_blank' to={'/resume'}>
@@ -36,7 +36,7 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
                   <IoMdOpen className=' ' />
                 </NavLink>
               </div>
-              <div className=' absolute z-0 group-hover:z-40 opacity-0 duration-300 group-hover:hover:opacity-100 md:group-hover:opacity-20 group-hover:opacity-100 md:tracking-widest transition-all md:group-hover:translate-x-24 md:group-hover:translate-y-2 -translate-y-10 font-marcher'>
+              <div className=' absolute z-0 group-hover:z-40 opacity-0 duration-300 group-hover:hover:opacity-100 md:group-hover:opacity-20 group-hover:opacity-100 md:tracking-widest transition-all md:group-hover:translate-x-24 md:group-hover:translate-y-2 -translate-y-6 font-marcher'>
                 <NavLink className=' h-full w-full -ml-1 italic cursor-default flex flex-row' target='_blank' to={'/curriculum'}>
                   Español
                   <IoMdOpen className=' ' />
@@ -113,7 +113,7 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
             <FaXTwitter className=' text-blue-100 group-hover:text-blue-800 transition-all duration-500 ' onMouseEnter={() => handleNonProfit} />
           </a>
         </div>
-        <div className={` z-0 absolute ${currentLighted ? 'bg-violet-950' : 'bg-purple-300'} md:w-[88%] w-[70%] h-screen left-0`}>
+        <div className={` z-0 absolute ${currentLighted ? 'bg-violet-950' : 'bg-purple-300'} md:w-[88%] w-[70%] h-full left-0`}>
         </div>
       </div>
     </section>
