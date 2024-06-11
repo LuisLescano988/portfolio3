@@ -3,14 +3,47 @@ import LiImage from '../assets/imgs/Li Pf.jpg'
 import gitHubPf from '../assets/imgs/GithubPf.jpg'
 import { KittenEyes } from './KittenEyes'
 import { IoMdOpen } from 'react-icons/io'
-import { FaXTwitter } from "react-icons/fa6";
 import iconResume from '../assets/imgs/resume icon.jpg'
 import { NavLink } from 'react-router-dom'
+import { RiJavascriptFill as jsLogo } from "react-icons/ri";
+import { AiOutlineHtml5 as htmlLogo } from "react-icons/ai";
+import { TbBrandCss3 as cssLogo } from "react-icons/tb";
+import { SiTailwindcss as tailwindLogo } from "react-icons/si";
+import { FaReact as reactLogo } from "react-icons/fa6";
+import { SiRedux as reduxLogo } from "react-icons/si";
+import { TbBrandNextjs as nextLogo } from "react-icons/tb";
+import { FaVuejs as vueLogo } from "react-icons/fa";
+import { FaNode as nodeLogo } from "react-icons/fa";
+import { SiExpress as expressLogo } from "react-icons/si";
+import { TbBrandPython as pythonLogo } from "react-icons/tb";
+import { SiDjango as djangoLogo } from "react-icons/si";
+import { SiPostgresql as postgreLogo } from "react-icons/si";
+import { SiMongodb as mongoLogo } from "react-icons/si";
+import { SiPostman as postmanLogo } from "react-icons/si";
+import { RiOpenaiFill as openaiLogo } from "react-icons/ri";
 
 
 const Contact = ({ currentLighted, setCurrentLighted }) => {
 
   const [profitDiv, setProfitDiv] = useState('false')
+  const langs = [
+    { name: "Javascript", icons: jsLogo },
+    { name: "Html", icons: htmlLogo },
+    { name: "Css", icons: cssLogo },
+    { name: "Tailwind", icons: tailwindLogo },
+    { name: "React", icons: reactLogo },
+    { name: "Redux", icons: reduxLogo },
+    { name: "NextJs", icons: nextLogo },
+    { name: "Vue", icons: vueLogo },
+    { name: "Node", icons: nodeLogo },
+    { name: "ExpressJs", icons: expressLogo },
+    { name: "Python", icons: pythonLogo },
+    { name: "Django", icons: djangoLogo },
+    { name: "Postgresql", icons: postgreLogo },
+    { name: "MongoDb", icons: mongoLogo },
+    { name: "Langchain", icons: openaiLogo },
+    { name: "Postman", icons: postmanLogo },
+  ]
 
   return (
     <section id='contact' className='snap-center min-[400px]:min-h-96 h-screen overflow-hidden' >
@@ -108,10 +141,50 @@ const Contact = ({ currentLighted, setCurrentLighted }) => {
           <div className={` relative -bottom-[85%] -left-[245%] md:left-0 md:bottom-0 rounded-3xl transition-all duration-500 ${currentLighted ? 'bg-fuchsia-300' : 'bg-yellow-200'}`}>
             <KittenEyes />
           </div>
-          <a className={` relative -bottom-[85%] -left-[253%] md:left-0 md:bottom-0 rounded-3xl ${currentLighted ? 'bg-indigo-400' : 'bg-yellow-100'} cursor-default group border-transparent border-4 hover:border-zinc-500 transition-all duration-500 flex justify-center items-center text-5xl `}
-            href={'https://twitter.com/LuisLes988'} target='_blank'>
-            <FaXTwitter className=' text-blue-100 group-hover:text-blue-800 transition-all duration-500 ' onMouseEnter={() => handleNonProfit} />
-          </a>
+          <div className={` relative grid grid-cols-4 -bottom-[85%] -left-[253%] md:left-0 md:bottom-0 rounded-3xl ${currentLighted ? 'bg-indigo-400' : 'bg-yellow-100'} cursor-default border-transparent hover:border-zinc-500 transition-all duration-500 flex justify-center items-center `}
+            target='_blank'>
+            {langs.map((lang, idx) => {
+              return <div className=' group relative h-fit flex justify-center items-center duration-200 ' key={idx}>
+                <lang.icons className=' z-30 group-hover:opacity-10 duration-500 text-4xl h-fit -my-[40%] '>
+                </lang.icons>
+                <div className=' opacity-0 font-black group-hover:opacity-85 z-10 h-full text-[70%] bottom-2 absolute'>{lang.name}</div>
+              </div>
+            }
+            )}
+            {/* <div className=' hover:border-opacity-90 transition-all duration-500 border-opacity-0 border border-gray-600 h-full rounded-2xl'>
+
+            </div>
+            <div className=' hover:border-opacity-90 transition-all duration-500 border-opacity-0 border border-gray-600 h-full rounded-2xl'>
+
+            </div>
+            <div className=' hover:border-opacity-90 transition-all duration-500 border-opacity-0 border border-gray-600 h-full rounded-2xl'>
+
+            </div>
+            <div className=' hover:border-opacity-90 transition-all duration-500 border-opacity-0 border border-gray-600 h-full rounded-2xl'>
+
+            </div>
+            <div className=' hover:border-opacity-90 transition-all duration-500 border-opacity-0 border border-gray-600 h-full rounded-2xl'>
+
+            </div>
+            <div className=' hover:border-opacity-90 transition-all duration-500 border-opacity-0 border border-gray-600 h-full rounded-2xl'>
+
+            </div>
+            <div className=' hover:border-opacity-90 transition-all duration-500 border-opacity-0 border border-gray-600 h-full rounded-2xl'>
+
+            </div>
+            <div className=' hover:border-opacity-90 transition-all duration-500 border-opacity-0 border border-gray-600 h-full rounded-2xl'>
+
+            </div>
+            <div className=' hover:border-opacity-90 transition-all duration-500 border-opacity-0 border border-gray-600 h-full rounded-2xl'>
+
+            </div>
+            <div className=' hover:border-opacity-90 transition-all duration-500 border-opacity-0 border border-gray-600 h-full rounded-2xl'>
+
+            </div>
+            <div className=' hover:border-opacity-90 transition-all duration-500 border-opacity-0 border border-gray-600 h-full rounded-2xl'>
+
+            </div> */}
+          </div>
         </div>
         <div className={` z-0 absolute ${currentLighted ? 'bg-violet-950' : 'bg-purple-300'} md:w-[88%] w-[70%] h-full left-0`}>
         </div>
